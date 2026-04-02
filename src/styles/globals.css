@@ -1,0 +1,92 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --font-inter: "Inter", system-ui, sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
+  --font-orbitron: "Orbitron", sans-serif;
+}
+
+/* Reset y base */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #0f0f1a;
+  color: #f9fafb;
+  font-family: var(--font-inter);
+}
+
+/* Scrollbar estilo gaming */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0ea5e9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* Selección de texto */
+::selection {
+  background-color: rgba(14, 165, 233, 0.3);
+  color: #f9fafb;
+}
+
+/* Clases utilitarias propias */
+@layer utilities {
+  .text-gradient-primary {
+    background-image: linear-gradient(90deg, #38bdf8 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-xp {
+    background-image: linear-gradient(90deg, #f59e0b 0%, #fcd34d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glass {
+    background-color: rgb(255 255 255 / 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgb(255 255 255 / 0.1);
+  }
+
+  .card-game {
+    background-color: #1a1a2e;
+    border: 1px solid #0f3460;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+  }
+
+  .glow-xp {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+  }
+
+  .glow-success {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+  }
+}
