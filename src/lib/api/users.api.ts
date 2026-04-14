@@ -2,9 +2,23 @@ import apiClient from "./client";
 import { User } from "@/types/user.types";
 import { ApiResponse } from "@/types/api.types";
 
+interface RegisterPayload {
+  email: string;
+  displayName: string;
+  photoURL?: string;
+}
+
 export const usersApi = {
   getMe: async (): Promise<User> => {
     const { data } = await apiClient.get<ApiResponse<User>>("/users/me");
+    return data.data!;
+  },
+
+  register: async (payload: RegisterPayload): Promise<User> => {
+    const { data } = await apiClient.post<ApiResponse<User>>(
+      "/users/register",
+      payload,
+    );
     return data.data!;
   },
 
