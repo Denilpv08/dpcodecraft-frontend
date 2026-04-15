@@ -48,3 +48,10 @@ export const getLevelColor = (level: UserLevel): string => {
   };
   return colors[level];
 };
+
+export const formatDate = (isoString: string): string =>
+  new Date(isoString).toLocaleDateString("es-CO", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
