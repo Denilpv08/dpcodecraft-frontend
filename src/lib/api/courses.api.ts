@@ -47,4 +47,11 @@ export const coursesApi = {
     );
     return data.data!;
   },
+
+  getLessonById: async (lessonId: string): Promise<Lesson> => {
+    const { data } = await apiClient.get<ApiResponse<Lesson>>(
+      `/lessons/${lessonId}`,
+    );
+    return data.data!;
+  },
 };

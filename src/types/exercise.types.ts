@@ -36,6 +36,8 @@ export interface Exercise {
   maxAttempts?: number; // undefined = ilimitado
   xpReward: number;
   bonusXp?: number;
+  language?: string; // Para ejercicios de código — "javascript", "python", etc.
+  hints: string[]; // Lista de hints disponibles para este ejercicio
 }
 
 export interface Achievement {
