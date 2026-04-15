@@ -6,7 +6,7 @@ import { getLevelLabel } from "@/lib/utils/xp.utils";
 
 interface LevelBadgeProps {
   level: UserLevel;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xs";
   animated?: boolean;
   showIcon?: boolean;
   className?: string;
@@ -45,6 +45,7 @@ const sizes = {
   sm: { badge: "px-2 py-0.5 text-[10px] rounded-md gap-1", icon: "text-xs" },
   md: { badge: "px-3 py-1   text-xs     rounded-lg gap-1.5", icon: "text-sm" },
   lg: { badge: "px-4 py-1.5 text-sm     rounded-xl gap-2", icon: "text-base" },
+  xs: { badge: "px-2 py-0.5 text-[10px] rounded-md gap-1", icon: "text-xs" },
 };
 
 export const LevelBadge = ({
